@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import { ProductionOrderController } from '../../controllers/productionOrder/productionOrder.controller.js'
 
-export const createPaysRouter = ({ productionOrderModel }) => {
+export const createProductionOrderRouter = ({ productionOrderModel }) => {
   const productionOrderRouter = Router()
 
   const productionOrderController = new ProductionOrderController({ productionOrderModel })

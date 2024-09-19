@@ -1,4 +1,4 @@
-### Recuperar todo
+                                                                                 PP### Recuperar todo
 GET http://localhost:3000/rutaApp/rutaRoute
 
 ### Recuperar un dato por id

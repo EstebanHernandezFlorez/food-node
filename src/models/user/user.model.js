@@ -1,6 +1,6 @@
 import { UserSchema } from '../../schemas/mongodb/user/user.schema.js'
 
-export class userModel {
+export class UserModel {
   async get () {
     const data = await UserSchema.find()
     return data
@@ -16,13 +16,13 @@ export class userModel {
     return data
   }
 
-  async put (id, obj) {
-    const data = await UserSchema.findOneAndUpdate({ id }, obj)
+  async put (_id, obj) {
+    const data = await UserSchema.findByIdAndUpdate(_id, obj)
     return data
   }
 
-  async delete (id) {
-    const data = await UserSchema.findOneAndDelete({ id })
+  async delete (_id) {
+    const data = await UserSchema.findByIdAndDelete(_id)
     return data
   }
 }
