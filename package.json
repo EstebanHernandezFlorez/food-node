@@ -18,6 +18,11 @@
     "express": "4.19.2",
     "jsonwebtoken": "9.0.2",
     "mongoose": "8.5.4",
+<<<<<<< HEAD
+=======
+    "pg": "8.12.0",
+    "validator": "^13.12.0",
+>>>>>>> 5efcba878ed66afecd9c66257860e1f8aef24abc
     "zod": "3.23.8"
   },
   "devDependencies": {
