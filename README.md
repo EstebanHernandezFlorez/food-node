@@ -58,10 +58,3 @@ Proyecto #Hermes para la agencia de viajes #ParcheTravels
       git checkout -b username/task
 
 - Repetir el proceso omitiendo la clonacion y la instalacion de los paquetes.
-
-## Hermesianos
-
-[Alan](https://github.com/Andrey0108)
-[Brayan](https://github.com/Bryan0813)
-[Camila](https://github.com/)
-[Felipe](https://github.com/jfelipeq14)
