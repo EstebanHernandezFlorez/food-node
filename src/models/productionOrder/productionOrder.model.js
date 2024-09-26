@@ -16,13 +16,13 @@ export class ProductionOrderModel {
     return data
   }
 
-  async put (id, obj) {
-    const data = await ProductionOrderSchema.findOneAndUpdate({ id }, obj)
+  async put (_id, obj) {
+    const data = await ProductionOrderSchema.findOneAndUpdate(_id, obj)
     return data
   }
 
-  async delete (id) {
-    const data = await ProductionOrderSchema.findOneAndDelete({ id })
+  async delete (_id) {
+    const data = await ProductionOrderSchema.findOneAndDelete(_id)
     return data
   }
 }
