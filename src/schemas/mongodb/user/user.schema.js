@@ -1,12 +1,14 @@
 import { Schema, model } from 'mongoose'
 
 const userSchema = new Schema({
-  documentType: { type: String, required: true },
-  document: { type: Number, required: true, unique: true },
-  cellphone: { type: String, required: true },
-  fullName: { type: String, required: true },
-  email: { type: String, required: true },
-  password: { type: String, required: true },
-  status: { type: String, required: true, default: 'Activo' }
+  TipoDocumento: { type: String },
+  Documento: { type: Number },
+  Celular: { type: String, required: true },
+  NombreCompleto: { type: String, required: true },
+  Correo: { type: String, required: true },
+  Contraseña: { type: String, required: true },
+  Rol: { type: String, required: true },
+  Estado: { type: Boolean, required: true, default: true } //Le cambié el nombre al estado "status" a "Estado" como está en el front
+  //Adicionalmente el estado deja de ser "string" a ser "boolean" ya que así está en el front
 })
 export const UserSchema = model('User', userSchema)
