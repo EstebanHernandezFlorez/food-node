@@ -1,13 +1,15 @@
 import express, { json } from 'express'
-import { corsMiddleware } from '../middlewares/cors.js'
+// import { corsMiddleware } from '../middlewares/cors.js'
 import { PORT } from '../config.js'
 import { dbConnection } from '../config/db.mongo.js'
+import cors from 'cors'
 
 export class Server {
   constructor () {
     this.app = express()
     this.app.use(json())
-    this.app.use(corsMiddleware())
+    this.app.use(cors())
+    // this.app.use(corsMiddleware())
     this.app.disable('x-powered-by')
   }
 
