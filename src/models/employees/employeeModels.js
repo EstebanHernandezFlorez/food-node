@@ -16,13 +16,13 @@ export class EmployeesModel {
     return data;
   }
 
-  async put(id, obj) {
-    const data = await EmployeeSchema.findOneAndUpdate({ id }, obj);
-    return data;
+  async put (_id, obj) {
+    const data = await EmployeeSchema.findByIdAndUpdate(_id, obj)
+    return data
   }
 
-  async delete(id) {
-    const data = await EmployeeSchema.findOneAndDelete({ id });
+  async delete(_id) {
+    const data = await EmployeeSchema.findOneAndDelete( _id);
     return data;
   }
 }

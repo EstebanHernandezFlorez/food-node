@@ -2,6 +2,7 @@ import express, { json } from 'express'
 import { corsMiddleware } from '../middlewares/cors.js'
 import { PORT } from '../config.js'
 import { dbConnection } from '../config/db.mongo.js'
+import cors from 'cors'
 
 export class Server {
   constructor () {

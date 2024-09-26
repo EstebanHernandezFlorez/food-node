@@ -1,10 +1,10 @@
 import { Router } from 'express'
 import { ProviderController } from '../../controllers/provider/providerController.js'
 
-export const createPaysRouter = ({ ProvidersModel }) => {
+export const createProviderRouter = ({ providerModel }) => {
   const ProviderRouter = Router()
 
-  const ProvidersController = new ProviderController({ ProvidersModel })
+  const ProvidersController = new ProviderController({ providerModel })
 
   ProviderRouter.get('/', ProvidersController.get)
   ProviderRouter.post('/', ProvidersController.post)
@@ -13,3 +13,4 @@ export const createPaysRouter = ({ ProvidersModel }) => {
 
   return ProviderRouter
 }
+ 

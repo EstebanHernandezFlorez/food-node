@@ -1,28 +1,30 @@
-import { ProvidersSchema } from '../../schemas/mongodb/provider/provider.schema.js'
+import ProviderShema from '../../schemas/mongodb/provider/provider.schema.js'
 
 export class ProviderModel {
   async get () {
-    const data = await ProvidersSchema.find()
+    const data = await ProviderShema.find()
     return data
   }
 
   async getById (id) {
-    const data = await ProvidersSchema.findOne({ id })
+    const data = await ProviderShema.findOne({ id })
     return data
   }
 
   async post (obj) {
-    const data = await ProvidersSchema(obj).save()
+    const data = await ProviderShema(obj).save()
     return data
   }
 
-  async put (id, obj) {
-    const data = await ProvidersSchema.findOneAndUpdate({ id }, obj)
+  async put (_id, obj) {
+    const data = await ProviderShema.findByIdAndUpdate(_id, obj)
     return data
   }
+  
 
   async delete (id) {
-    const data = await ProvidersSchema.findOneAndDelete({ id })
+    const data = await ProviderShema.findOneAndDelete(id )
     return data
   }
 }
+
