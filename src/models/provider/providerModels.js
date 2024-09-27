@@ -22,8 +22,8 @@ export class ProviderModel {
   }
   
 
-  async delete (id) {
-    const data = await ProviderShema.findOneAndDelete(id )
+  async delete (_id) {
+    const data = await ProviderShema.findByIdAndDelete(_id )
     return data
   }
 }
