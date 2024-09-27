@@ -1,12 +1,13 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model } from 'mongoose';
 
-const providerSchema = new Schema({
-  fullName: Number,
-  typeDocument: String,
-  document: Number,
-  phone: Date,
-  company: Number,
-  status: String
-})
+const ProviderShema = new Schema({
+  NombreCompleto: { type: String, required: true },
+  TipoDocument: { type: String, required: true },
+  Document: { type: Number, required: true },
+  Telefono: { type: Number, required: true },
+  Empresa: { type: String, required: true },
+  Estado: { type: String, required: true, default: 'Activo' }
+});
 
-export const PaysSchema = model('Provider', providerSchema)
+// Exporta tanto el esquema como el modelo
+export default model('Provider', ProviderShema);

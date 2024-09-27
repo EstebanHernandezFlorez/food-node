@@ -1,10 +1,10 @@
 import { Schema, model } from 'mongoose'
 
-const employeesSchema = new Schema({
+const EmployeeSchema = new Schema({
   typeDocument: String,
   document: Number,
-  fullName: Number,
-  dateOfEntry: Date,
+  fullName: String,
+  dateOfEntry: String,
   emergencyContact: Number,
   Relationship: String,
   nameFamilyMember: String,
@@ -15,4 +15,5 @@ const employeesSchema = new Schema({
   status: String
 })
 
-export const PaysSchema = model('Employees', employeesSchema)
+export default model('Employees', EmployeeSchema)
+ 

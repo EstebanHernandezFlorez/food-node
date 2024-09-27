@@ -1,5 +1,5 @@
 {
-  "name": "hermes-node",
+  "name": "food-node",
   "version": "1.0.0",
   "main": "app.js",
   "type": "module",
@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "Proyecto #Hermes para la agencia de viajes #ParcheTravels",
+  "description": "Proyecto Food in production",
   "dependencies": {
     "bcryptjs": "2.4.3",
     "cors": "^2.8.5",
